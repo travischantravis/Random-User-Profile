@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: beige;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  background-color: #fff;
+  padding: 30px;
+  margin: 10px;
+  text-align: center;
+  width: 220px;
+  max-width: 100%;
+}
+
+.card img {
+  border-radius: 50%;
+}
