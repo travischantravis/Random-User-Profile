@@ -22,8 +22,39 @@ body {
   text-align: center;
   width: 220px;
   max-width: 100%;
+  border-radius: 4px;
 }
 
 .card img {
   border-radius: 50%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  width: 100px;
+}
+
+.card.active {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transform: scale(1.2);
+}
+
+.card h4 {
+  margin: 10px 0;
+}
+
+.card small {
+  display: block;
+}
+
+.card button {
+  background-color: lightskyblue;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 10px 25px;
+  margin-top: 25px;
+  color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  .cards {
+    flex-wrap: wrap;
+  }
 }
