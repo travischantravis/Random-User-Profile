@@ -18,4 +18,10 @@ Some useful JS I used
 fetch(url).then().catch()
 ```
 
+Use `fetch()` to use the fetch Javascript API
+
 Images are from [Random User generator](https://randomuser.me/photos) API
+
+- Didier Drogba
+- Tammy Abraham
+- John Terry
