@@ -25,3 +25,5 @@ Images are from [Random User generator](https://randomuser.me/photos) API
 - Didier Drogba
 - Tammy Abraham
 - John Terry
+
+No `slim` version of jQuery

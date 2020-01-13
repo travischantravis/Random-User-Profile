@@ -9,7 +9,12 @@ body {
 }
 
 h1 {
-  padding-bottom: 50px;
+  margin-top: 20px;
+  padding-bottom: 40px;
+}
+.alert {
+  width: 90%;
+  margin: 0 auto;
 }
 
 .cards {

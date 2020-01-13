@@ -6,6 +6,7 @@ const img = document.querySelectorAll("img");
 const refresh_btn = document.querySelector(".refresh-btn");
 const male_checkbox = document.querySelector("#male-checkbox");
 const female_checkbox = document.querySelector("#female-checkbox");
+const alert_container = document.querySelector(".alert-container");
 
 // Generate random user information from API fetch
 function fetch_api() {
@@ -35,8 +36,7 @@ refresh_btn.addEventListener("click", () => {
 // Follow me Button
 follow_btn.forEach((element, index) =>
   element.addEventListener("click", () => {
-    console.log(name);
-    alert("Followed " + name[index].textContent + " on Facebook");
+    add_alert(index);
   })
 );
 
@@ -50,7 +50,6 @@ male_checkbox.addEventListener("click", () => {
     url = url.replace("&gender=male", "");
   }
 });
-
 female_checkbox.addEventListener("click", () => {
   if (female_checkbox.checked) {
     console.log("checked");
@@ -61,4 +60,25 @@ female_checkbox.addEventListener("click", () => {
   }
 });
 
-// change alert window
+// Add and remove Bootstrap alert after clicking follow button
+function add_alert(index) {
+  // Add alert
+  const newAlert = document.createElement("div");
+  newAlert.setAttribute("class", "alert alert-success");
+  newAlert.setAttribute("role", "alert");
+  newAlert.textContent = "Followed " + name[index].textContent + " on Facebook";
+  alert_container.appendChild(newAlert);
+
+  // Remove alert automatically after ceftain second
+  setTimeout(() => {
+    $(".alert")
+      .fadeTo(500, 0)
+      .slideUp(500, () => {
+        $(this).remove();
+      });
+  }, 3000);
+  // Remove the element from DOM completely, pretty on9
+  setTimeout(() => {
+    alert_container.removeChild(newAlert);
+  }, 3501);
+}
